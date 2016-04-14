@@ -1,4 +1,3 @@
-
 var MythDropDown=function(list)  {
     if(Array.isArray(list))
 	this.list=list;
@@ -58,8 +57,6 @@ MythDropDown.prototype.delete=function(){
     
 };
 
-
-
 var list=['test option 1','test option 2'];
 var myList=new MythDropDown(list);
 
@@ -103,8 +100,8 @@ var main={
 
 		  )
 		 
-		)
+		);
     }
-}
+};
 
-m.mount(document.body,main)
+m.mount(document.body,main);
