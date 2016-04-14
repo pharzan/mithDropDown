@@ -2,6 +2,7 @@
 A simple reusable drop down component for mithril js framework.
 This component is intended to create reusable drop down lists as a component in [mithril js.](http://mithril.js.org/)
 A list as an array is passed in to the object as it is beig instantiated and the drop down is created with the array.
+###[Live on jsFiddle](https://jsfiddle.net/pharzan/ar20pL37/1/)
 ```javascript
 var list=['Banana','Apple','Orange','Kiwi'];
 var myList=new MythDropDown(list);
