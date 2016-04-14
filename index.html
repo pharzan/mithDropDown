@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Mithdropdown by pharzan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Mithdropdown</h1>
+      <h2 class="project-tagline">A simple drop down component for mithril js framework</h2>
+      <a href="https://github.com/pharzan/mithDropDown" class="btn">View on GitHub</a>
+      <a href="https://github.com/pharzan/mithDropDown/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/pharzan/mithDropDown/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="mith-dropdown" class="anchor" href="#mith-dropdown" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>mith DropDown</h1>
+
+<p>A basic reusable drop down component for mithril js framework.
+This component is intended to create reusable drop down lists as a component in <a href="http://mithril.js.org/">mithril js.</a>
+A list as an array is passed in to the object as it is beig instantiated and the drop down is created with the array.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list<span class="pl-k">=</span>[<span class="pl-s"><span class="pl-pds">'</span>Banana<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>Apple<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>Orange<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>Kiwi<span class="pl-pds">'</span></span>];
+<span class="pl-k">var</span> myList<span class="pl-k">=</span><span class="pl-k">new</span> <span class="pl-en">MythDropDown</span>(list);</pre></div>
+
+<p>Then the component can be used in any mithril view:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> main<span class="pl-k">=</span>{
+    <span class="pl-en">view</span><span class="pl-k">:</span><span class="pl-k">function</span>(){
+        <span class="pl-k">return</span> <span class="pl-smi">m</span>.<span class="pl-en">component</span>(myList);
+    }
+}</pre></div>
+
+<p>And the created view can be placed in the DOM:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> main<span class="pl-k">=</span>{
+    <span class="pl-en">view</span><span class="pl-k">:</span><span class="pl-k">function</span>(){
+        <span class="pl-k">return</span> <span class="pl-smi">m</span>.<span class="pl-en">component</span>(myList);
+    }
+}</pre></div>
+
+<p>For easier usage the component has the following functions which can be accessed directly:</p>
+
+<ul>
+<li>update() //updated the drop down with a new list</li>
+<li>sort() //sort the drop down</li>
+<li>delete() //remove the selected item</li>
+<li>getSelected() // returns the selected items name and index.</li>
+</ul>
+
+<p>Any of the above functions can be accessed in the examples below:</p>
+
+<div class="highlight highlight-source-js"><pre> <span class="pl-k">var</span> <span class="pl-c1">L1</span><span class="pl-k">=</span>[<span class="pl-s"><span class="pl-pds">'</span>Yellow<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>Black<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>Orange<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>Brown<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>Red<span class="pl-pds">'</span></span>];
+     <span class="pl-smi">myList</span>.<span class="pl-en">update</span>(<span class="pl-c1">L1</span>);
+     <span class="pl-smi">myList</span>.<span class="pl-c1">sort</span>();
+     <span class="pl-smi">myList</span>.<span class="pl-en">delete</span>();
+     <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-smi">myList</span>.<span class="pl-c1">selected</span>.<span class="pl-c1">name</span>);
+     <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-smi">myList</span>.<span class="pl-c1">selected</span>.<span class="pl-c1">index</span>);</pre></div>
+
+<h2>
+<a id="links" class="anchor" href="#links" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Links</h2>
+
+<ul>
+<li>
+<a href="https://github.com/markdown-it/markdown-it">markdown-it</a> for Markdown parsing</li>
+<li>
+<a href="http://codemirror.net/">CodeMirror</a> for the awesome syntax-highlighted editor</li>
+<li>
+<a href="http://softwaremaniacs.org/soft/highlight/en/">highlight.js</a> for syntax highlighting in output code blocks</li>
+<li>
+<a href="https://github.com/dankogai/js-deflate">js-deflate</a> for gzipping of data to make it fit in URLs</li>
+</ul>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/pharzan/mithDropDown">Mithdropdown</a> is maintained by <a href="https://github.com/pharzan">pharzan</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
